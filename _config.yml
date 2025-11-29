@@ -20,20 +20,18 @@
 
 title: Kamal Badalzada
 email: kbadalzada24757@ada.edu.az
-description: >- # this means to ignore newlines until "baseurl:"
-  idk what to write here... :P
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username:  cskamal
 github_username:  aslkb
 youtube_username: "cskamal7"
 youtube_url: ""
-codecademy_username: "ajax0135205790"
-codecademy_url: "https://www.codecademy.com/profiles/ajax0135205790"
-
-hero_image: ""
-
-hero_text: "...and that is my cat, Pancake (litlle bit 'burnt' for panckake...)"
+codecademy_username: ""
+codecademy_url: ""
 
 # Build settings
 theme: minima
