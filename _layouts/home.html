@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% if page.hero_image or site.hero_image %}
+  {% assign hero = page.hero_image | default: site.hero_image %}
+  <div class="hero">
+    <div class="hero-inner wrapper">
+      <h1 class="hero-title">{{ page.hero_title | default: site.title }}</h1>
+      {% if page.hero_text or site.hero_text %}
+        <p class="hero-subtitle">{{ page.hero_text | default: site.hero_text }}</p>
+      {% endif %}
+    </div>
+    {% comment %}Display the image as a block below the text instead of using it as a background{% endcomment %}
+    <div class="hero-image wrapper">
+      <img src="{{ hero | relative_url }}" alt="{{ page.hero_text | default: site.hero_text | default: site.title }}" />
+    </div>
+  </div>
+{% endif %}
+
+{{ content }}
+
+<!--
+  This file overrides the theme's `home` layout to remove the automatic
+  posts list that the default theme (minima) injects on the homepage.
+  By delegating to `layout: default` and only rendering {{ content }},
+  the homepage will no longer include the posts list while preserving
+  the same header/footer/structure.
+-->

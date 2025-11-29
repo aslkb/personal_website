@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "SITE1101 Project 1 @ ADAUni"
+date:   2025-10-19 14:50:00 +0400
+categories: projects
+permalink: /projects/SITE1101/LogicGates
+---
