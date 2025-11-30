@@ -36,7 +36,8 @@ codecademy_url: "https://www.codecademy.com/profiles/ajax0135205790"
 theme: minima
 plugins:
   - jekyll-feed
-
+exclude:
+  - chat.md
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
