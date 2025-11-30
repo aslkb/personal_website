@@ -2,67 +2,7 @@
 ---
 /* Custom styles for the personal site */
 /* Keep this file as the main custom stylesheet. Avoid having assets/main.css at the same time to prevent duplicate output. */
-@import "{{ site.theme }}";
-
-/* Responsive homepage cat image styling */
-.home .home-cat {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.25rem 0;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
-}
-
-/* Small devices: ensure the image doesn't dominate the content flow */
-@media (max-width: 640px) {
-  .home .home-cat { margin: 1rem 0; }
-}
-
-/* Post image row: scoped to post content so it doesn't show on the homepage */
-.post-content .post-image-row {
-  display: flex;
-  gap: 18px;
-  align-items: stretch;
-  justify-content: center;
-  margin: 1rem 0 2rem 0;
-}
-.post-content .post-image-row .image-item {
-  flex: 1 1 33%;
-  text-align: center;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-.post-content .post-image-row .image-item img {
-  width: 100%;
-  height: 220px; /* fixed visual height */
-  display: block;
-  object-fit: cover; /* crop to fill - keeps consistent visual size */
-  object-position: center center;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
-}
-.post-content .post-image-row .image-item figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  padding-top: 0.5rem;
-}
-@media (max-width: 760px) {
-  .post-content .post-image-row { gap: 10px; }
-  .post-content .post-image-row .image-item { flex-basis: 50%; }
-  .post-content .post-image-row .image-item img { height: 180px; }
-}
-@media (max-width: 480px) {
-  .post-content .post-image-row { flex-direction: column; }
-  .post-content .post-image-row .image-item { flex-basis: 100%; }
-  .post-content .post-image-row .image-item img { height: 140px; }
-}
-<<<<<<< HEAD
----
----
-/* Custom styles for the personal site */
-/* Keep this file as the main custom stylesheet. Avoid having assets/main.css at the same time to prevent duplicate output. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import "minima";
 
 /* Responsive homepage cat image styling */
@@ -90,14 +30,14 @@
 }
 .post-content .post-image-row .image-item {
   flex: 1 1 33%;
-  text-align: center;
+  text-align: left;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 .post-content .post-image-row .image-item img {
-  width: 100%;
-  height: 400px; /* fixed visual height */
+  width: 60%;
+  height: none; /* fixed visual height */
   display: block;
   object-fit: cover; /* crop to fill - keeps consistent visual size */
   object-position: center center;
@@ -119,65 +59,46 @@
   .post-content .post-image-row .image-item { flex-basis: 100%; }
   .post-content .post-image-row .image-item img { height: 140px; }
 }
-=======
----
----
-/* Custom styles for the personal site */
-/* Keep this file as the main custom stylesheet. Avoid having assets/main.css at the same time to prevent duplicate output. */
-@import "{{ site.theme }}";
 
-/* Responsive homepage cat image styling */
-.home .home-cat {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.25rem 0;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
-}
-
-/* Small devices: ensure the image doesn't dominate the content flow */
-@media (max-width: 640px) {
-  .home .home-cat { margin: 1rem 0; }
-}
-
-/* Post image row: scoped to post content so it doesn't show on the homepage */
-.post-content .post-image-row {
+/* Column layout for specific posts: When the element uses the `column` class
+   we make the images stack vertically at all sizes (project-specific) */
+.post-content .post-image-row.column {
   display: flex;
+  flex-direction: column;
   gap: 18px;
-  align-items: stretch;
-  justify-content: center;
-  margin: 1rem 0 2rem 0;
 }
-.post-content .post-image-row .image-item {
-  flex: 1 1 33%;
-  text-align: center;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+.post-content .post-image-row.column .image-item {
+  flex: 0 0 auto;
 }
-.post-content .post-image-row .image-item img {
-  width: 100%;
-  height: 400px; /* fixed visual height */
-  display: block;
-  object-fit: cover; /* crop to fill - keeps consistent visual size */
-  object-position: center center;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+.post-content .post-image-row.column .image-item img {
+  height: auto;
+  max-height: none;
 }
-.post-content .post-image-row .image-item figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  padding-top: 0.5rem;
+
+/* Header & Footer: Open Blue background */
+.site-header, .site-footer {
+  background-color: #1e90ff; /* DodgerBlue */
+  color: #fff;
 }
-@media (max-width: 760px) {
-  .post-content .post-image-row { gap: 10px; }
-  .post-content .post-image-row .image-item { flex-basis: 50%; }
-  .post-content .post-image-row .image-item img { height: 180px; }
+.site-header a, .site-header .site-title {
+  color: #fff;
 }
-@media (max-width: 480px) {
-  .post-content .post-image-row { flex-direction: column; }
-  .post-content .post-image-row .image-item { flex-basis: 100%; }
-  .post-content .post-image-row .image-item img { height: 140px; }
+
+/* Footer-specific colors: make icons black and footer text black */
+.site-footer {
+  color: #000;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
->>>>>>> e02e7c4 (Use Architect remote theme & add jekyll-remote-theme; import theme into main.scss)
+.site-footer a, .site-footer .username {
+  color: #000;
+}
+.site-footer .svg-icon { fill: #000; }
+
+/* Ensure names and all footer text are black, overriding theme color rules */
+.site-footer .footer-col-wrapper {
+  color: #000 !important;
+}
+.site-footer .p-name {
+  color: #000 !important;
+}
+

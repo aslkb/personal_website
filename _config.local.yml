@@ -1,0 +1,4 @@
+remote_theme: null
+plugins:
+  - jekyll-feed
+theme: minima
